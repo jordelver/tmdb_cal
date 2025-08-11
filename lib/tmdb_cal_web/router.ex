@@ -18,6 +18,8 @@ defmodule TmdbCalWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :home
+
+    get "/calendar.ics", CalendarController, :index
   end
 
   # Other scopes may use custom stacks.

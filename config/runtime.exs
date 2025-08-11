@@ -92,4 +92,7 @@ if config_env() == :prod do
   #       force_ssl: [hsts: true]
   #
   # Check `Plug.SSL` for all available options in `force_ssl`.
+
+  config :tmdb_cal, :tmdb_account_id, System.fetch_env!("TMDB_ACCOUNT_ID")
+  config :tmdb_cal, :tmdb_api_token, System.fetch_env!("TMDB_API_TOKEN")
 end

@@ -80,3 +80,6 @@ config :phoenix_live_view,
   debug_attributes: true,
   # Enable helpful, but potentially expensive runtime checks
   enable_expensive_runtime_checks: true
+
+config :tmdb_cal, :tmdb_account_id, System.fetch_env!("TMDB_ACCOUNT_ID")
+config :tmdb_cal, :tmdb_api_token, System.fetch_env!("TMDB_API_TOKEN")
