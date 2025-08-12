@@ -31,7 +31,7 @@ defmodule TmdbCal.Watchlist do
     Enum.map(watchlist_items, fn item ->
       %TmdbCal.WatchlistItem{
         id: item.payload["id"],
-        title: item.payload["title"],
+        title: item.payload["title"] || item.payload["original_name"],
         release_date: item.payload["release_date"] || item.payload["first_air_date"],
         synopsis: item.payload["overview"]
       }
