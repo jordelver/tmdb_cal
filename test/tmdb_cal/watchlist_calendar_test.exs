@@ -53,14 +53,14 @@ defmodule TmdbCal.WatchlistCalendarTest do
       DESCRIPTION:https://www.themoviedb.org/movie/1078605
       DTEND:20250806T000000Z
       DTSTART:20250806T000000Z
-      SUMMARY:Weapons
+      SUMMARY:Weapons is airing
       UID:1078605
       END:VEVENT
       BEGIN:VEVENT
       DESCRIPTION:https://www.themoviedb.org/tv/157239
       DTEND:20250812T000000Z
       DTSTART:20250812T000000Z
-      SUMMARY:Alien: Earth
+      SUMMARY:Alien: Earth is airing
       UID:157239
       END:VEVENT
       END:VCALENDAR

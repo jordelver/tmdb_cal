@@ -19,7 +19,7 @@ defmodule TmdbCal.WatchlistCalendar do
   defp create_event_from_item(item) do
     %ICalendar.Event{
       uid: item.id,
-      summary: item.title,
+      summary: WatchlistItem.display_title(item),
       description: WatchlistItem.tmdb_url(item),
       dtstart: WatchlistItem.release_date(item),
       dtend: WatchlistItem.release_date(item)

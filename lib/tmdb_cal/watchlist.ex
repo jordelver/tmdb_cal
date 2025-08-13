@@ -44,6 +44,13 @@ defmodule TmdbCal.WatchlistItem do
 
   defp tv_show?(%__MODULE__{first_air_date: nil}), do: false
   defp tv_show?(%__MODULE__{first_air_date: _}), do: true
+
+  @doc """
+  Returns a display title.
+  """
+  def display_title(%__MODULE__{title: title}) do
+    "#{title} is airing"
+  end
 end
 
 defmodule TmdbCal.Watchlist do
