@@ -1,4 +1,6 @@
 defmodule TmdbCal.WatchlistCalendar do
+  alias TmdbCal.WatchlistItem
+
   @moduledoc """
   Responsible for returning a calendar of ???.
   """
@@ -18,13 +20,9 @@ defmodule TmdbCal.WatchlistCalendar do
     %ICalendar.Event{
       uid: item.id,
       summary: item.title,
-      dtstart: format_date(item.release_date),
-      dtend: format_date(item.release_date)
+      description: WatchlistItem.tmdb_url(item),
+      dtstart: WatchlistItem.release_date(item),
+      dtend: WatchlistItem.release_date(item)
     }
-  end
-
-  defp format_date(date) do
-    {:ok, date} = Date.from_iso8601(date)
-    DateTime.new!(date, ~T[00:00:00], "Etc/UTC")
   end
 end

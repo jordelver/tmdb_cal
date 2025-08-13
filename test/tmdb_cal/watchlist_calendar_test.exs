@@ -50,12 +50,14 @@ defmodule TmdbCal.WatchlistCalendarTest do
       VERSION:2.0
       PRODID:-//Elixir ICalendar//tmdb_cal//EN
       BEGIN:VEVENT
+      DESCRIPTION:https://www.themoviedb.org/movie/1078605
       DTEND:20250806T000000Z
       DTSTART:20250806T000000Z
       SUMMARY:Weapons
       UID:1078605
       END:VEVENT
       BEGIN:VEVENT
+      DESCRIPTION:https://www.themoviedb.org/tv/157239
       DTEND:20250812T000000Z
       DTSTART:20250812T000000Z
       SUMMARY:Alien: Earth
