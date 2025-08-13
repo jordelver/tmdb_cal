@@ -27,7 +27,12 @@ defmodule TmdbCal.WatchlistItem do
   def release_date(%__MODULE__{release_date: release_date, first_air_date: first_air_date}) do
     date = release_date || first_air_date
     {:ok, date} = Date.from_iso8601(date)
+
     DateTime.new!(date, ~T[00:00:00], "Etc/UTC")
+    |> DateTime.to_string()
+    |> String.replace("-", "")
+    |> String.replace(":", "")
+    |> String.replace(" ", "T")
   end
 
   @doc """
