@@ -2,7 +2,7 @@ defmodule TmdbCal.WatchlistCalendar do
   alias TmdbCal.WatchlistItem
 
   @moduledoc """
-  Responsible for returning a calendar of ???.
+  Responsible for returning a calendar of items on a watchlist.
   """
 
   @doc """
