@@ -25,14 +25,7 @@ defmodule TmdbCal.WatchlistItem do
   Returns the release date for this TV show or movie item
   """
   def release_date(%__MODULE__{release_date: release_date, first_air_date: first_air_date}) do
-    date = release_date || first_air_date
-    {:ok, date} = Date.from_iso8601(date)
-
-    DateTime.new!(date, ~T[00:00:00], "Etc/UTC")
-    |> DateTime.to_string()
-    |> String.replace("-", "")
-    |> String.replace(":", "")
-    |> String.replace(" ", "T")
+    (release_date || first_air_date) |> String.replace("-", "")
   end
 
   @doc """

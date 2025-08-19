@@ -4,8 +4,8 @@ VERSION:2.0
 PRODID:-//Elixir ICalendar//tmdb_cal//EN
 <%= for event <- events do %>BEGIN:VEVENT
 DESCRIPTION:<%= WatchlistItem.tmdb_url(event) %>
-DTEND:<%= WatchlistItem.release_date(event) %>
-DTSTART:<%= WatchlistItem.release_date(event) %>
+DTEND;VALUE=DATE:<%= WatchlistItem.release_date(event) %>
+DTSTART;VALUE=DATE:<%= WatchlistItem.release_date(event) %>
 SUMMARY:<%= WatchlistItem.display_title(event) %>
 UID:<%= event.id %>
 END:VEVENT
