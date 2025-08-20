@@ -57,7 +57,7 @@ defmodule TmdbCalWeb.CalendarControllerTest do
     BEGIN:VCALENDAR
     CALSCALE:GREGORIAN
     VERSION:2.0
-    PRODID:-//Elixir ICalendar//tmdb_cal//EN
+    PRODID:-//Jordan Elver//tmdb_cal//EN
     BEGIN:VEVENT
     DESCRIPTION:https://www.themoviedb.org/movie/1078605
     DTEND;VALUE=DATE:20250806

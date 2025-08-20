@@ -1,7 +1,7 @@
 BEGIN:VCALENDAR
 CALSCALE:GREGORIAN
 VERSION:2.0
-PRODID:-//Elixir ICalendar//tmdb_cal//EN
+PRODID:-//Jordan Elver//tmdb_cal//EN
 <%= for event <- events do %>BEGIN:VEVENT
 DESCRIPTION:<%= WatchlistItem.tmdb_url(event) %>
 DTEND;VALUE=DATE:<%= WatchlistItem.release_date(event) %>
