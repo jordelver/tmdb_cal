@@ -27,7 +27,7 @@ defmodule TmdbCal.WatchlistTest do
     assert %TmdbCal.WatchlistItem{
       id: 157239,
       title: "Alien: Earth",
-      release_date: "2025-08-12",
+      first_air_date: "2025-08-12",
       synopsis: "When the mysterious deep space research vessel USCSS " <>
                 "Maginot crash-lands on Earth, Wendy and a ragtag group of " <>
                 "tactical soldiers make a fateful discovery that puts them " <>
