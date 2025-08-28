@@ -10,5 +10,14 @@ config :tmdb_cal, TmdbCalWeb.Endpoint, cache_static_manifest: "priv/static/cache
 # Do not print debug messages in production
 config :logger, level: :info
 
+# Import new watchlist items on a schedule
+config :tmdb_cal, TmdbCal.ScheduledImport,
+  jobs: [
+    daily_import: [
+      schedule: "0 3 * * *",  # 3am every day
+      task: {TmdbCal.Watchlist.Importer, :import, []}
+    ]
+  ]
+
 # Runtime production configuration, including reading
 # of environment variables, is done on config/runtime.exs.

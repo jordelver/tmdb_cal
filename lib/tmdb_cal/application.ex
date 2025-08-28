@@ -17,7 +17,8 @@ defmodule TmdbCal.Application do
       # Start a worker by calling: TmdbCal.Worker.start_link(arg)
       # {TmdbCal.Worker, arg},
       # Start to serve requests, typically the last entry
-      TmdbCalWeb.Endpoint
+      TmdbCalWeb.Endpoint,
+      TmdbCal.ScheduledImport
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
